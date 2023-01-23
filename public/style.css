@@ -1,0 +1,99 @@
+body{
+    background-color: #eeeeec;
+}
+
+*{
+    font-family: 'Satoshi', sans-serif;
+}
+
+
+/* Welcome Page ================================================ */
+
+.btn{
+    margin-top: 30px;
+    --bs-btn-padding-x: 4.7rem;
+}
+.welcome{
+    /* padding: 10px; */
+    border-radius: 14px;
+    width: 70%;
+    height: 80%;
+    background-color: white;
+    border: 2px solid black;
+    -webkit-box-shadow: 10px 10px 16px -3px rgba(0,0,0,0.19);
+-moz-box-shadow: 10px 10px 16px -3px rgba(0,0,0,0.19);
+box-shadow: 10px 10px 16px -3px rgba(0,0,0,0.19);
+    
+}
+.welcome-img{
+    object-fit: cover;
+    padding: 0;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+    justify-content: baseline;
+}
+.welcome-content{
+    text-align: center;
+}
+
+.btn-register{
+    padding: 10px 100px;
+    background-color: #f9a855;
+    
+    border: 2px solid black;
+}
+.btn-register:hover{
+    background-color: #eb7a23;
+}
+.btn-login{
+    padding: 10px 108px;
+    background-color: #e0e8e1;
+    
+    border: 2px solid black;
+}
+.btn-login:hover{
+    background-color: #ced9cf;
+}
+ .welcome-content h2{
+    font-size: 48px;
+    font-weight: 700;
+ }
+ .welcome-content p{
+    font-size: 24px;
+    font-weight: 500;
+    color: grey;
+ }
+
+
+
+
+
+
+
+
+
+ /* Responsive Layout */
+
+
+ @media only screen and (max-width: 600px) {
+    .welcome-img{
+        /* border-radius: 14px; */
+        border-top-right-radius: 14px;
+        border-bottom-left-radius: 0;
+    }
+    .welcome-content h2{
+        font-size: 24px;
+        margin-top: 10px;
+    }
+    .welcome-content p{
+        font-size: 12px;
+    }
+    .btn-register{
+        scale: 0.50;
+        margin-top: -10px;
+    }
+    .btn-login{
+        scale: 0.50;
+        margin-top: -10px ;
+    }
+  }
