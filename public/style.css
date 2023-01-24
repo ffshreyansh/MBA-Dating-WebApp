@@ -1,68 +1,175 @@
-body{
-    background-color: #eeeeec;
-}
-
 *{
     font-family: 'Satoshi', sans-serif;
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* Layout */
+
+.navbar{
+    /* background-color: white; */
+    padding: 10px 100px;
+    font-weight: 500;
+    z-index: 1;
+    transition: background-color 0.5s ease;
+}
+.navbar .fa-bars{
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    color: black;
+}
+.navbar .btn
+{
+    
+    margin-left: 20px;
+    padding: 10px 40px; 
+}
+
+
+.container0{
+    height: 0px;
+}
 
 /* Welcome Page ================================================ */
 
-.btn{
-    margin-top: 30px;
-    --bs-btn-padding-x: 4.7rem;
+
+/* VDO */
+
+.fullscreen-video {
+    position: fixed;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -10;
 }
+
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    /* background-color: #000; */
+    opacity: 0.6;
+    z-index: -9;
+}
+
+
+/* VDO */
 .welcome{
-    /* padding: 10px; */
-    border-radius: 14px;
-    width: 70%;
-    height: 80%;
-    background-color: white;
-    border: 2px solid black;
-    -webkit-box-shadow: 10px 10px 16px -3px rgba(0,0,0,0.19);
--moz-box-shadow: 10px 10px 16px -3px rgba(0,0,0,0.19);
-box-shadow: 10px 10px 16px -3px rgba(0,0,0,0.19);
+    /* background-image: url('/public/'); */
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    text-align: center;
     
 }
-.welcome-img{
-    object-fit: cover;
-    padding: 0;
-    border-top-left-radius: 14px;
-    border-bottom-left-radius: 14px;
-    justify-content: baseline;
+.welcome img{
+    width: 100%;
+    text-align: center;
+    
 }
-.welcome-content{
+.welcome h1{
+    scale: 1.5;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 70px;
+    color: white;
+    font-weight: 800;
+    line-height: 70px;
+}
+.welcome .btn{
+    padding: 10px 50px;
+    background-color: #ff5500;
+    transition: transform 0.2s; 
+    z-index: 0;
+    border: 0;
+}
+.welcome .btn:hover{
+    transform: translateY(-4px);
+}
+
+
+/* About Us------------------------------------------- */
+
+#about{
+    width: 100%;
+    z-index: 0;
+    height: 650px;
+    background-color: #ff5500;
+    top: 700px;
+    position: relative;
+    padding: 50px 100px;
+    color: white
+}
+#about h2{
+    font-weight: 600;
+    font-size: 36px;
+    margin-bottom:50px;
+    
+}
+#about p{
+    font-size: 28px;
+}
+#about img{
+    margin-top: 80px;
+}
+
+
+/* Pricing======================================= */
+
+#pricing{
+    padding: 50px 100px;
+    justify-content: center;
+    position: relative;
+    top: 700px;
+    background-color: white;
+    text-align: center;
+}
+#pricing .text-bg{
+    background-color: #ff5500;    
+}
+#pricing .btn1{
+    background-color: white;
+    border-color: #ff5500;
+    color: #ff5500;
+}
+#pricing .btn1:hover{
+    background-color: #ff5500;
+    color: white;
+}
+#pricing .btn2{
+    background-color: #ff5500;
+    border: 0;
+    color: white;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    padding: 30px;
+    color: white;
+    position: relative;
+    top: 700px;
+    background-color: #ff5500;
     text-align: center;
 }
 
-.btn-register{
-    padding: 10px 100px;
-    background-color: #f9a855;
-    
-    border: 2px solid black;
-}
-.btn-register:hover{
-    background-color: #eb7a23;
-}
-.btn-login{
-    padding: 10px 108px;
-    background-color: #e0e8e1;
-    
-    border: 2px solid black;
-}
-.btn-login:hover{
-    background-color: #ced9cf;
-}
- .welcome-content h2{
-    font-size: 48px;
-    font-weight: 700;
- }
- .welcome-content p{
-    font-size: 24px;
-    font-weight: 500;
-    color: grey;
- }
+
+
+
+
+
+
 
 
 
@@ -76,24 +183,28 @@ box-shadow: 10px 10px 16px -3px rgba(0,0,0,0.19);
 
 
  @media only screen and (max-width: 600px) {
-    .welcome-img{
-        /* border-radius: 14px; */
-        border-top-right-radius: 14px;
-        border-bottom-left-radius: 0;
+    .navbar{
+        padding: 10px 30px;
     }
-    .welcome-content h2{
-        font-size: 24px;
+    .welcome h1{
+        scale: 1.5;
+        font-size: 35px;
+        line-height: 32px;
+    }
+    #about{
+        padding: 20px 40px;
+    }
+    #about h2{
+        margin-bottom: 10px;
+        margin-top: 20px;
+        font-size: 26px;
+    }
+    #about p{
+        font-size: 16px;
+
+    }
+    #about img{
         margin-top: 10px;
     }
-    .welcome-content p{
-        font-size: 12px;
-    }
-    .btn-register{
-        scale: 0.50;
-        margin-top: -10px;
-    }
-    .btn-login{
-        scale: 0.50;
-        margin-top: -10px ;
-    }
+
   }

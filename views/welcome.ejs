@@ -1,16 +1,81 @@
-<div class="row welcome position-absolute top-50 start-50 translate-middle">
-  
-    <img src="img2-01.png" class="col-lg-6 col-md-3 col-sm-2 welcome-img" alt="dating img">
-  
-  <div class="col-lg-6 col-md-3 col-sm-2">
-    <div class="welcome-content position-relative top-50 start-50 translate-middle">
-      <h2>Welcome to MBA</h2>
-      <p>Let's make dating fun not spam!</p>
-    <a href="/users/register" class="btn btn-register">Register</a><br>
-    <a href="/users/login" class="btn btn-login">Login   </a>
-    </div>
+<%- include('partials/header') %> 
+<div class="col welcome">
+  <div class="row-lg-6 row-md-3 row-sm-2 position-absolute top-50 start-50 translate-middle">
+    <div class="bg-overlay"></div>
+    <video class="fullscreen-video" id="myVideo" autoplay="autoplay" muted loop>
+        <source src="/vdo.mp4">
+        Your browser does not support the video tag.
+    </video>
+    <h1>Let's make dating more fun less spam.</h1>
+   <a href="/users/register" class="btn btn-danger">Create an Account</a>
+  </div>
+  <div class="row-lg-6 row-md-3 row-sm-2">
   </div>
 </div>
+<section id="about">
+  <div class="row">
+    <div class="col-lg-6 col-md-3 col-sm-2">
+      <h2>Why us?</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempore, dicta perspiciatis reiciendis obcaecati quas, ut odio inventore minus, quisquam necessitatibus. Pariatur cupiditate quasi eaque dolor veniam, aliquam culpa distinctio earum velit eligendi sapiente ab mollitia libero ipsum error doloribus? Reprehenderit ex voluptatem nesciunt exercitationem cupiditate non, rem aperiam rerum eveniet at qui veniam quis sequi amet recusandae dolorum mollitia laudantium culpa voluptatibus odio doloremque odit minus earum. Totam, dolorum?</p>
+    </div>
+    <div class="col-lg-6 col-md-3 col-sm-2">
+      <img src="/Texting-bro.svg" alt="">
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">Pricing</h1>
+    <p class="fs-5 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, pariatur vero impedit deserunt sint doloremque maiores enim! Hic, repellendus debitis?</p>
+  </div>
+</header>
+
+<main>
+  <div class="row row-cols-1 row-cols-md-2 mb-2 text-center">
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">Free</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>10 users included</li>
+            <li>2 GB of storage</li>
+            <li>Email support</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="w-100 btn btn-lg btn1 btn-outline-primary">Sign up for free</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">Pro</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>20 users included</li>
+            <li>10 GB of storage</li>
+            <li>Priority email support</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="w-100 btn btn-lg btn2 btn-primary">Get started</button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<footer>
+  <div>
+    <h3>Join and Enjoy Spam free dating</h3>
+  </div>
+</footer>
 
 
 
@@ -19,6 +84,68 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Get the navbar element
+var navbar = document.querySelector(".navbar");
+
+// Add an event listener for the scroll event
+window.addEventListener("scroll", function() {
+  // Get the current scroll position
+  var scrollPos = window.pageYOffset;
+
+  // Get the page height
+  var pageHeight = document.documentElement.scrollHeight;
+
+  // Check if the current scroll position is greater than or equal to half of the page height
+  if (scrollPos >= (pageHeight/8)) {
+    // Change the background color of the navbar to white
+    navbar.style.backgroundColor = "white";
+  } else {
+    // Change the background color of the navbar to transparent
+    navbar.style.backgroundColor = "transparent";
+  }
+});
+
+  
+
+  document.addEventListener("DOMContentLoaded", function(){
+    document.body.addEventListener("touchstart", playVideo);
+    function playVideo() {
+        const video = document.getElementById('myVideo');
+        if(video.playing) {
+        } else {
+            video.play();
+        }
+    }
+});
+</script>
 
 
 
