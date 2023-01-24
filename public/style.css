@@ -6,14 +6,17 @@
     display: none;
 }
 
+
 /* Layout */
 
 .navbar{
-    /* background-color: white; */
+    background-color: white;
     padding: 10px 100px;
     font-weight: 500;
-    z-index: 1;
-    transition: background-color 0.5s ease;
+    border-bottom: 2px solid black;
+}
+.nav-item{
+    margin: 0 20px;
 }
 .navbar .fa-bars{
     border: 0;
@@ -21,11 +24,20 @@
     box-shadow: none;
     color: black;
 }
-.navbar .btn
-{
+.btn1{
+    background-color: #FF565E;
+    border: 2px solid black;
+    color: black;
+    padding: 10px 50px;
+    transition:  0.2s ease-in-out;
+}
+.btn1:hover{
+    color: white;
+    box-shadow: 6px 6px 0px -1px black;
+    background-color: #e73e46;
+    transform: translateY(-4px);
+    border: 2px solid black;
     
-    margin-left: 20px;
-    padding: 10px 40px; 
 }
 
 
@@ -33,178 +45,219 @@
     height: 0px;
 }
 
-/* Welcome Page ================================================ */
+/* Hero Page ================================================ */
 
 
-/* VDO */
-
-.fullscreen-video {
-    position: fixed;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: -10;
+#hero{
+    background-color: #B7DFE6;
+    padding: 50px 100px;
+    background-image: url("/wer-01.png");
+        overflow: hidden;
 }
-
-.bg-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    /* background-color: #000; */
-    opacity: 0.6;
-    z-index: -9;
-}
-
-
-/* VDO */
-.welcome{
-    /* background-image: url('/public/'); */
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    text-align: center;
+#hero .row{
+    margin: 0;
+    height: 600px;
     
 }
-.welcome img{
-    width: 100%;
-    text-align: center;
-    
+#hero h1{
+    font-size: 68px;
+    font-weight: 700;
+    margin-top: 100px;
+    line-height: 65px;
+    margin-bottom: 20px;
 }
-.welcome h1{
-    scale: 1.5;
-    margin-bottom: 50px;
-    text-align: center;
-    font-size: 70px;
-    color: white;
-    font-weight: 800;
-    line-height: 70px;
+#hero p{
+    font-size: 32px;
+    line-height: 34px;
+    font-weight: 300;
+    margin-bottom: 40px;
 }
-.welcome .btn{
-    padding: 10px 50px;
-    background-color: #ff5500;
-    transition: transform 0.2s; 
-    z-index: 0;
-    border: 0;
+#hero img{
+    height: 550px;
+    margin-left: 50px;
+    transition:  0.2s ease-in-out;
 }
-.welcome .btn:hover{
+#hero .img2{
+    visibility: hidden;
+}
+#hero img:hover{
+    scale: 1.1;
+    transform: rotate(5deg);
+}
+
+/* Why MBA======================================= */
+
+#why{
+    background-color: white;
+    padding: 50px 100px;
+}
+#why span{
+    width: 100px;
+    height: 4px;
+    background-color: #FF565E;
+    align-self: center;
+}
+#why h2{
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-right: 8px;
+}
+#why p{
+    font-size: 24px;
+    font-weight: 400;
+
+}
+#why .content{
+    margin-top: 50px;
+}
+#why .content-2{
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+#why .card{
+    border: 2px solid black;
+    transition:  0.2s ease-in-out;
+    background-color: #B7DFE6;
+}
+#why .card:hover{
+    box-shadow: 8px 8px 0px -1px black;
+    transform: translateY(-4px);
+
+}
+#why .card-title{
+    font-weight: 700;
+}
+
+
+/* Contact=======================================================0 */
+
+#contact{
+    background-color: #B7DFE6;
+    padding: 50px 100px;
+}
+#contact span{
+    width: 100px;
+    height: 4px;
+    background-color: #FF565E;
+    align-self: center;
+}
+#contact h2{
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-right: 8px;
+}
+#contact .content{
+    margin-top: 40px;
+}
+
+#contact input{
+    /* padding: 20px 100px 10px 20px; */
+    border: 2px solid black;
+    margin-right: 20px;
+    border-radius: 8px;
+    transition:  0.2s ease-in-out;
+    background-color: #B7DFE6;
+    outline: none;
+    font-weight: 500;
+}
+
+#contact input:hover{
+    box-shadow: 8px 8px 0px -1px black;
+    transform: translateY(-4px);
+}
+#contact textarea{
+    /* padding: 20px 100px 10px 20px; */
+    border: 2px solid black;
+    margin-right: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    outline: none;
+    transition:  0.2s ease-in-out;
+    background-color: #B7DFE6;
+    font-weight: 500;
+}
+#contact textarea:hover{
+    box-shadow: 8px 8px 0px -1px black;
     transform: translateY(-4px);
 }
 
-
-/* About Us------------------------------------------- */
-
-#about{
-    width: 100%;
-    z-index: 0;
-    height: 650px;
-    background-color: #ff5500;
-    top: 700px;
-    position: relative;
-    padding: 50px 100px;
-    color: white
-}
-#about h2{
-    font-weight: 600;
-    font-size: 36px;
-    margin-bottom:50px;
-    
-}
-#about p{
-    font-size: 28px;
-}
-#about img{
-    margin-top: 80px;
-}
-
-
-/* Pricing======================================= */
-
-#pricing{
-    padding: 50px 100px;
-    justify-content: center;
-    position: relative;
-    top: 700px;
-    background-color: white;
-    text-align: center;
-}
-#pricing .text-bg{
-    background-color: #ff5500;    
-}
-#pricing .btn1{
-    background-color: white;
-    border-color: #ff5500;
-    color: #ff5500;
-}
-#pricing .btn1:hover{
-    background-color: #ff5500;
-    color: white;
-}
-#pricing .btn2{
-    background-color: #ff5500;
-    border: 0;
-    color: white;
-}
+/* Footer */
 
 footer{
+    background-color: white;
     width: 100%;
-    height: 100px;
-    padding: 30px;
-    color: white;
-    position: relative;
-    top: 700px;
-    background-color: #ff5500;
+    height: 50px;
+    color: black;
     text-align: center;
+    padding: 15px 0;
+    font-weight: 700;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
- /* Responsive Layout */
+ /*====================================== Responsive Layout */
 
 
  @media only screen and (max-width: 600px) {
     .navbar{
         padding: 10px 30px;
     }
-    .welcome h1{
-        scale: 1.5;
-        font-size: 35px;
-        line-height: 32px;
+    .navbar .offcanvas-body{
+        text-align: left;
+        padding: 30px;
     }
-    #about{
-        padding: 20px 40px;
+    #hero{
+        padding: 15px 30px;
+        text-align: center;
+        background-image: url("/wer-01.png");
+        overflow: hidden;
     }
-    #about h2{
-        margin-bottom: 10px;
-        margin-top: 20px;
-        font-size: 26px;
+    #hero .row{
+        margin: 0;
+        height: 600px;
+        
     }
-    #about p{
-        font-size: 16px;
+    #hero h1{
+        font-size: 42px;
+        font-weight: 700;
+        margin-top: 100px;
+        line-height: 45px;
+        margin-bottom: 20px;
+    }
+    #hero p{
+        font-size:22px;
+        line-height: 34px;
+        font-weight: 300;
+        margin-bottom: 40px;
+    }
+    #hero img{
+        visibility: hidden;
+    }
+    #hero .img2{
+        visibility: visible;
+        height: 150px;
+        width: auto;
+        margin: 0;
+        position: relative;
+        top: 550px;
+    }
+    #hero .img2:hover{
+        transform: rotate(0deg);
+        scale: 1;
+    }
 
+    #why{
+        padding: 50px 38px;
     }
-    #about img{
-        margin-top: 10px;
+    #why p{
+        font-size: 18px;
     }
+    #why .card{
+        /* margin-bottom: 20px; */
+    }
+    #contact{
+        padding: 50px 38px;
+    }
+    
 
   }
